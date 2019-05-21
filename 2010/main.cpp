@@ -63,6 +63,7 @@ int main() {
     for(int j=0; j<p; j++) {
         fin.get(raides, 15);
         duom[j].patiekalas = raides;
+        
         for(int e=0; e<n; e++) {
             fin >> duom[j].produktai[e];
         }
@@ -72,7 +73,7 @@ int main() {
     }
     fin.close();
     for(int f=0; f<n; f++) {
-        cout << duom[f].patiekalas << prod_kaina(kainos, duom[f].produktai, f, n) << endl;
+        cout << "---" << duom[f].patiekalas << prod_kaina(kainos, duom[f].produktai, f, n) << endl;
     }
 
     int centai = svec_kaina(duom, n);
