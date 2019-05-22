@@ -71,7 +71,7 @@ int main() {
     }
 
     for(int f=0; f<kiekis; f++) {
-        cout << "--" << apskritys[f].pavadinimas << " " << apskritys[f].maz_gyventoju << " " << apskritys[f].gyventojai << endl; // informacijos spausdinimas
+        cout << apskritys[f].pavadinimas << " " << apskritys[f].maz_gyventoju << " " << apskritys[f].gyventojai << endl; // informacijos spausdinimas
     }
 
     return 0;
