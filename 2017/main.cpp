@@ -15,9 +15,9 @@ int main() {
         int b;
     };
     struct koordinates {
-        int r;
-        int g;
-        int b;
+        int r = 255;
+        int g = 255;
+        int b = 255;
     };
     koordinates koord[100][100]; // atitinka koord[x][y]
     ifstream fin;
@@ -43,6 +43,26 @@ int main() {
     koord[0][0].b = duom[0].b;  
     
     */
+    for(int j = 0; j<sk; j++) {
+        for(int k = duom[j].x; k<=duom[j].plotis; k++) {
+            for(int l=duom[j].y; l<=duom[j].ilgis; l++) {
+                koord[k][l].r = duom[j].r;
+                koord[k][l].g = duom[j].g;
+                koord[k][l].b = duom[j].b;
+                cout << "koord["<<k<<"]["<<l<<"].rgb = " << duom[j].r <<" "<< duom[j].g<<" " << duom[j].b<<endl;
+            }
+            
+        }
+    }
+
+    for(int f=0; f<2; f++) {
+        for(int g=0; g<2; g++) {
+            cout << "koord: " << f<< " " << g << " -- " << koord[f][g].r << " " << koord[f][g].g << " " << koord[f][g].b << endl;
+        }
+        
+    }
+
+    
     
     return 0;
 }
